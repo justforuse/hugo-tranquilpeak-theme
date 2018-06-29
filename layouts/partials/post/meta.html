@@ -5,6 +5,10 @@
         {{ partial "internal/date.html" . }}
       </time>
     {{ end }}
+    {{ if .Params.author}}
+      <span>{{ i18n "post.author" }}: {{ .Params.author }}</span>
+    {{ end }}
+    <!-- {{ .ReadingTime}} -->
     {{ partial "post/category.html" . }}
   </div>
 {{ end }}
