@@ -8,4 +8,4 @@
   closeIcon.on('click', function(){
     pop.hide()
   })
-})(jQuery)
+})(jQuery);
