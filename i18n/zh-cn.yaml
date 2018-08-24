@@ -82,10 +82,10 @@
   translation: "共 {{ .Paginator.TotalPages }} 页"
 
 - id: "pagination.newer_posts"
-  translation: "上一页"
+  translation: "下一页"
 
 - id: "pagination.older_posts"
-  translation: "下一页"
+  translation: "上一页"
 
 - id: "pagination.previous"
   translation: "上一篇"
