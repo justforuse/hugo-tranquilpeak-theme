@@ -1,23 +1,28 @@
-<div class="text-center" id="reward">
-  <p class="text-medium">觉得作者写得不错？不妨轻击下方按钮~</p>
-  <button class="btn btn--danger" id="reward-btn">打赏</button>
-  <div id="reward-pop">
-    <div node-type="close-btn" id="reward-close-btn" class="fa fa-close"></div>
-    <img class="avatar" src="https://s1.ax1x.com/2018/06/30/PFL2Se.jpg">
-    <div class="reward-title">赏点银子给楼主凑凑买咖啡喝吧</div>
-    <div node-type="reward-code" class="reward-code">
-      <figure>
-        <img src="https://s1.ax1x.com/2018/08/24/P7g78A.png" alt="">
-        <figcaption>微信</figcaption>
-      </figure>
-      <figure>
-        <img src="https://s1.ax1x.com/2018/08/24/P7gTCd.png" alt="">
-        <figcaption>支付宝</figcaption>
-      </figure>
+{{ if (eq .Site.Language.Lang "zh-cn") }}
+  <div class="text-center" id="reward">
+    <p class="text-medium">觉得作者写得不错？不妨轻击下方按钮~</p>
+    <button class="btn btn--danger" id="reward-btn">打赏</button>
+    <div id="reward-pop">
+      <div node-type="close-btn" id="reward-close-btn" class="fa fa-close"></div>
+      <img class="avatar" src="https://s1.ax1x.com/2018/06/30/PFL2Se.jpg">
+      <div class="reward-title">赏点银子给楼主凑凑买咖啡喝吧</div>
+      <div node-type="reward-code" class="reward-code">
+        <figure>
+          <img src="https://s1.ax1x.com/2018/08/24/P7g78A.png" alt="">
+          <figcaption>微信</figcaption>
+        </figure>
+        <figure>
+          <img src="https://s1.ax1x.com/2018/08/24/P7gTCd.png" alt="">
+          <figcaption>支付宝</figcaption>
+        </figure>
+      </div>
+      <div class="reward-txt">扫码打赏，建议金额1-10元</div>
+      <p class="power-cy">
+        <a href="http://changyan.kuaizhan.com" style="text-decoration:none;color:#d1d1d1;" target="_blank">Copied From 畅言</a>
+      </p>
     </div>
-    <div class="reward-txt">扫码打赏，建议金额1-10元</div>
-    <p class="power-cy">
-      <a href="http://changyan.kuaizhan.com" style="text-decoration:none;color:#d1d1d1;" target="_blank">Copied From 畅言</a>
-    </p>
   </div>
-</div>
+{{ else }}
+  <hr>
+  <p class="text-center">{{ ":point_down:" | emojify }} Please leave your comment if you like this.{{ ":point_down:" | emojify }}</p>
+{{ end }}
