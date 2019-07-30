@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "start": "grunt default",
-    "prod": "grunt buildProd",
+    "prod": "grunt buildProd && cp -r src/res static",
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
