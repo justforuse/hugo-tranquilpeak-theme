@@ -27,7 +27,8 @@ module.exports = function(grunt) {
         appRoot: 'src/'
       },
       files: {
-        'layouts/partials/head.html': pipeline.tranquilpeakCssFilesToInject
+        'layouts/partials/head.html': pipeline.tranquilpeakCssFilesToInject,
+        'layouts/partials/index-head.html': pipeline.tranquilpeakCssFilesToInject
       }
     },
     prodJs: {
@@ -55,7 +56,8 @@ module.exports = function(grunt) {
         appRoot: 'src/'
       },
       files: {
-        'layouts/partials/head.html': 'static/css/*.min.css'
+        'layouts/partials/head.html': 'static/css/*.min.css',
+        'layouts/partials/index-head.html': 'static/css/*.min.css'
       }
     }
   });
