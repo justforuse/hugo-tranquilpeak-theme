@@ -2,10 +2,13 @@
 // --------------------------------------------
 
 // Font families
-$open-sans:            'Open Sans';
-$open-sans-sans-serif: 'Open Sans', sans-serif;
-$merriweather-serif:   'Merriweather', serif;
-$menlo:                 Menlo, Consolas, monospace;
+$weixin-font-family: -apple-system,BlinkMacSystemFont,SF UI Text,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Arial,sans-serif;
+
+
+$open-sans:            $weixin-font-family;
+$open-sans-sans-serif: $weixin-font-family;
+$merriweather-serif:   $weixin-font-family;
+$menlo:                $weixin-font-family;
 
 $font-family-base: $open-sans-sans-serif;
 
