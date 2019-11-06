@@ -1,18 +1,28 @@
-const cacheName = 'github-blog'
+const expectedCaches = 'github-blog2'
 const staticAssets = [
-  './index.html',
-  '../css/style-pjjgx7hrb8vv9pbskfof6viaui7zjvehwpy2o5nyefvuqo2ndj41zgqa0s2l.min.css',
-  '../js/script-j13y8kxuakdr6f9htwrtc8jglq2lwuyofwkjepswsfswklgtbamt4qwawx6w.min.js'
+  '../css/style-zeiwctigkogtvpvj0egasslli0f0ds0fgqxfmddzssy3wjlw6oz5buiywhrb.min.css',
+  '../js/script-jolqrkyg17dxydltbpg3rnxckzpon1cph80fa4u74kx2pv6cgo6wwkgyuqqo.min.js'
 ]
 
 self.addEventListener('install', async e => {
-  const cache = await caches.open(cacheName)
+  const cache = await caches.open(expectedCaches)
   await cache.addAll(staticAssets)
   return self.skipWaiting()
 })
 
 self.addEventListener('activate', e => {
   self.clients.claim()
+  e.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (!expectedCaches.includes(key)) {
+          return caches.delete(key);
+        }
+      })
+    )).then(() => {
+      console.log(`${expectedCaches} now ready to handle fetches!`);
+    })
+  );
 })
 
 self.addEventListener('fetch', async e => {
@@ -27,13 +37,13 @@ self.addEventListener('fetch', async e => {
 })
 
 async function cacheFirst(req) {
-  const cache = await caches.open(cacheName)
+  const cache = await caches.open(expectedCaches)
   const cached = await cache.match(req)
   return cached || fetch(req)
 }
 
 async function networkAndCache(req) {
-  const cache = await caches.open(cacheName)
+  const cache = await caches.open(expectedCaches)
   try {
     const fresh = await fetch(req)
     await cache.put(req, fresh.clone())
