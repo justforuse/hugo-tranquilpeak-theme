@@ -9,7 +9,7 @@
 <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
 <!--EXTERNAL SCRIPTS END-->
 <!--SCRIPTS-->
-<script src="/js/script-nynxrr3vefplomcausidfxus7bytp4llo3zdmljovhttdfsowgzyk3zwrn7m.min.js"></script>
+<script src="/js/script-vtcfdsfczkbxf645cd3c5tqolpjytwcf8jclqczfikustul074zs7wg1aqtz.min.js"></script>
 <!--SCRIPTS END-->
 {{ range .Site.Params.customJS }}
   {{ if isset . "src" }}
@@ -42,6 +42,20 @@ $(document).ready(function() {
     }
     hljs.highlightBlock(block);
   });
+
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-theme')
+  }
+
+  const toggleTheme = (e) => {    
+    const darkModeOn = e.detail.colorScheme === 'dark';
+    if(darkModeOn) {
+      document.body.classList.add('dark-theme')
+    } else {
+      document.body.classList.remove('dark-theme')
+    }
+  };
+  document.addEventListener('colorschemechange', toggleTheme);
 });
 </script>
 {{ end }}

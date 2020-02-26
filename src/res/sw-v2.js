@@ -1,7 +1,7 @@
 const expectedCaches = 'github-blog2'
 const staticAssets = [
-  '../css/style-zeiwctigkogtvpvj0egasslli0f0ds0fgqxfmddzssy3wjlw6oz5buiywhrb.min.css',
-  '../js/script-jolqrkyg17dxydltbpg3rnxckzpon1cph80fa4u74kx2pv6cgo6wwkgyuqqo.min.js'
+  '../css/style-mhrnwg9pe7iemgfs5rasrckpbpqrrga2tlofbcgv0c2l9ccqylipxngvzqmz.min.css',
+  '../js/script-vtcfdsfczkbxf645cd3c5tqolpjytwcf8jclqczfikustul074zs7wg1aqtz.min.js'
 ]
 
 self.addEventListener('install', async e => {
