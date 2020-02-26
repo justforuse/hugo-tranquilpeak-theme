@@ -16,3 +16,67 @@ pre.code-highlight > code {
 .post-header-cover{
     background-attachment: fixed;
 }
+
+@media (prefers-color-scheme: dark) {
+    #bottom-bar, #header, #main {
+        background-color: rgb(53, 54, 53);
+    }
+    
+    html, body, input, textarea, select, button {
+        border-color: #686662;
+        color: #fff8ec;
+    }
+    
+    .postShorten .postShorten-content, .postShorten .postShorten-excerpt {
+        color: rgb(215, 206, 190);
+    }
+    
+    .post .post-content {
+        color: rgb(215, 206, 190);
+    }
+    
+    code {
+        background-color: rgb(42, 42, 41);
+    }
+    
+    .btn {
+        background-color: rgb(39, 40, 39);
+    }
+    
+    .btn--default {
+        color: rgb(203, 195, 178) !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: rgb(226, 219, 204);
+    }
+    
+    .tag, a.tag {
+        background-color: rgb(39, 40, 39);
+    }
+    
+    .archive .archive-title {
+        color: rgb(215, 206, 190);
+    }
+    
+    .archive .archive-posts .archive-post .archive-post-title {
+        color: rgb(215, 206, 190);
+    }
+    
+    a.link-unstyled, a.link-unstyled:active, a.link-unstyled:hover {
+        color: inherit !important;
+    }
+    
+    #about #about-card {
+        background-color: rgb(39, 40, 39);
+        box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 5px;
+    }
+    
+    #about #about-card #about-card-bio, #about #about-card #about-card-job, #about #about-card #about-card-location {
+        color: rgb(215, 206, 190);
+    }
+    
+    .feature {
+        background-color: rgb(71, 58, 34);
+    }
+}
